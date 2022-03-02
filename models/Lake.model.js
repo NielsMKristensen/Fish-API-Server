@@ -2,17 +2,22 @@ const { Schema, model } = require("mongoose");
 
 
 const lakeSchema = new Schema(
-  {
-    name: String,
-    street: String,
-    city: String,
-    password: String,
-    phoneNumber: Number,
-    email: {
-      type: String,
-      unique: true,
+    {
+      lakeName: {type: String, unique: true, required: true},
+      street: String,
+      city: String,
+      lakePhoneNumber: Number,
+      lakeEmail: String,
+      description: String,
+      openingHours: String,
+      prices: String,
+      CVRnumber: Number,
+      pictureLinks: String, 
+      email: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     },
-  },
+    },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
     timestamps: true,

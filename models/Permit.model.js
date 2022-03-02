@@ -3,11 +3,11 @@ const { Schema, model } = require("mongoose");
 // TODO: Please make sure you edit the user model to whatever makes sense in this case
 const permitSchema = new Schema(
   {
-    email: {
+    requestedBy: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    name: {
+    lake: {
         type: Schema.Types.ObjectId,
         ref: 'Lake'
     },
