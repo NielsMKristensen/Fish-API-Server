@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
-// TODO: Please make sure you edit the user model to whatever makes sense in this case
-const userSchema = new Schema(
+
+const lakeSchema = new Schema(
   {
     name: String,
     street: String,
@@ -19,6 +19,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model("User", userSchema);
+const Lake = model("Lake", lakeSchema);
 
-module.exports = User;
+module.exports = Lake;

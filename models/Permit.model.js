@@ -1,17 +1,17 @@
 const { Schema, model } = require("mongoose");
 
 // TODO: Please make sure you edit the user model to whatever makes sense in this case
-const userSchema = new Schema(
+const permitSchema = new Schema(
   {
-    name: String,
-    street: String,
-    city: String,
-    password: String,
-    phoneNumber: Number,
     email: {
-      type: String,
-      unique: true,
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     },
+    name: {
+        type: Schema.Types.ObjectId,
+        ref: 'Lake'
+    },
+    date: Date
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
@@ -19,6 +19,6 @@ const userSchema = new Schema(
   }
 );
 
-const User = model("User", userSchema);
+const Permit = model("Permit", permitSchema);
 
-module.exports = User;
+module.exports = Permit;
