@@ -13,7 +13,7 @@ const lakeSchema = new Schema(
       prices: String,
       CVRnumber: Number,
       pictureLinks: String, 
-      email: {
+      ownerEmail: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },

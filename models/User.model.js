@@ -10,7 +10,6 @@ const userSchema = new Schema(
     city: String,
     phoneNumber: Number,
     ownerOfLake: Boolean,
-    
     lakesOwned: {
       type: Schema.Types.ObjectId,
       ref: 'Lake'
