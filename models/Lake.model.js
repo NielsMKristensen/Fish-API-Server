@@ -15,7 +15,8 @@ const lakeSchema = new Schema(
       pictureLinks: String, 
       ownerEmail: {
         type: Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        default: {}
     },
     },
   {

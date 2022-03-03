@@ -1,0 +1,3 @@
+cloudinary html tag thing
+
+<input type="file" name="Lake-Picture" />

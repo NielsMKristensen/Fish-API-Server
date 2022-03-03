@@ -25,6 +25,9 @@ app.use("/api", allRoutes);
 const lakeRouter = require("./routes/lake.routes");
 app.use("/api", isAuthenticated, lakeRouter);
 
+const permitRouter = require("./routes/permit.routes");
+app.use("/api", isAuthenticated, permitRouter);
+
 const authRouter = require("./routes/auth.routes"); //  <== IMPORT
 app.use("/auth", authRouter);
 

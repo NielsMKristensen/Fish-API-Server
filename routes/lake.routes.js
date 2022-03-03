@@ -4,13 +4,14 @@ const mongoose = require("mongoose");
 
 const Lake = require("../models/Lake.model");
 const { isAuthenticated } = require("../middleware/jwt.middleware");
+const fileUploader = require('../config/cloudinary.config');
 
 //POST /api/lakes creates a new Lake
 
-router.post("/lake", isAuthenticated, (req, res, next) =>{
+router.post("/lake", isAuthenticated, fileUploader.single('Lake-Picture'), (req, res, next) =>{
     const {lakeName, street, city, lakePhoneNumber, lakeEmail, description, openingHours, prices, CVRnumber, pictureLinks, ownerEmail} = req.body;
 
-    Lake.create ({lakeName, street, city, lakePhoneNumber, lakeEmail, description, openingHours, prices, CVRnumber, pictureLinks, ownerEmail})
+    Lake.create ({lakeName, street, city, lakePhoneNumber, lakeEmail, description, openingHours, prices, CVRnumber, pictureLinks: req.file.path, ownerEmail})
         .then((response) => res.json(response))
         .catch((err) => res.json(err));
 });
