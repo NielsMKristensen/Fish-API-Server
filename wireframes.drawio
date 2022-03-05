@@ -213,7 +213,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="card s 3" id="Kog-bOLBiIL39jo3EtVT">
-        <mxGraphModel dx="1314" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+        <mxGraphModel dx="887" dy="602" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="qDPxSHgvEoIbaNm9d3oi-0"/>
                 <mxCell id="qDPxSHgvEoIbaNm9d3oi-1" parent="qDPxSHgvEoIbaNm9d3oi-0"/>
@@ -238,13 +238,13 @@
                 <mxCell id="qDPxSHgvEoIbaNm9d3oi-12" value="e-mail" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" parent="qDPxSHgvEoIbaNm9d3oi-1" vertex="1">
                     <mxGeometry x="235" y="140" width="170" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="qDPxSHgvEoIbaNm9d3oi-33" value="Lake name" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" vertex="1" parent="qDPxSHgvEoIbaNm9d3oi-1">
+                <mxCell id="qDPxSHgvEoIbaNm9d3oi-33" value="Lake name" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" parent="qDPxSHgvEoIbaNm9d3oi-1" vertex="1">
                     <mxGeometry x="235" y="240" width="170" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="qDPxSHgvEoIbaNm9d3oi-34" value="Date" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" vertex="1" parent="qDPxSHgvEoIbaNm9d3oi-1">
+                <mxCell id="qDPxSHgvEoIbaNm9d3oi-34" value="Date" style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" parent="qDPxSHgvEoIbaNm9d3oi-1" vertex="1">
                     <mxGeometry x="235" y="280" width="170" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="qDPxSHgvEoIbaNm9d3oi-36" value="submit will send a bill for payment as a mail to the user. all data will be prefilled &lt;br&gt;based on user&amp;nbsp;logged in and which lake was selected.&lt;br&gt;&lt;br&gt;date needs to be filled in." style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" vertex="1" parent="qDPxSHgvEoIbaNm9d3oi-1">
+                <mxCell id="qDPxSHgvEoIbaNm9d3oi-36" value="submit will send a bill for payment as a mail to the user. all data will be prefilled &lt;br&gt;based on user&amp;nbsp;logged in and which lake was selected.&lt;br&gt;&lt;br&gt;date needs to be filled in." style="text;html=1;points=[];align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontFamily=Verdana" parent="qDPxSHgvEoIbaNm9d3oi-1" vertex="1">
                     <mxGeometry x="250" y="390" width="620" height="80" as="geometry"/>
                 </mxCell>
             </root>
