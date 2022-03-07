@@ -93,7 +93,7 @@ router.put("/lake/:lakeId", isAuthenticated, (req, res, next) => {
       .catch((err) => res.json(err));
   });
 
-  //DETE /api/lake/:lakeId deletes a specific lake based on id.
+  //DELETE /api/lake/:lakeId deletes a specific lake based on id.
 
   router.delete("/lake/:lakeId", isAuthenticated, (req, res, next) => {
     const { lakeId } = req.params;
