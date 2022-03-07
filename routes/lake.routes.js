@@ -13,10 +13,20 @@ const fileUploader = require('../config/cloudinary.config');
 
 router.post("/lake", isAuthenticated, (req, res, next) =>{
     const {lakeName, street, city, lakePhoneNumber, lakeEmail, description, openingHours, prices, CVRnumber, pictureLinks, ownerEmail} = req.body;
+ 
+    // Check the users collection if a user with the same email already exists
+  Lake.findOne({ lakeName })
+  .then((foundLake) => {
+    // If the lake with same name already exists, send an error response
+    if (foundLake) {
+      res.status(400).json({ message: "Lake already exists." });
+      return;
+    }
 
-    Lake.create ({lakeName, street, city, lakePhoneNumber, lakeEmail, description, openingHours, prices, CVRnumber, pictureLinks, ownerEmail})
+    return Lake.create ({lakeName, street, city, lakePhoneNumber, lakeEmail, description, openingHours, prices, CVRnumber, pictureLinks, ownerEmail})
         .then((response) => res.json(response))
         .catch((err) => res.json(err));
+})
 });
 
 //picture upload to cloudinary
