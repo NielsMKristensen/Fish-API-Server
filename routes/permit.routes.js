@@ -11,13 +11,13 @@ const { isAuthenticated } = require("../middleware/jwt.middleware");
 
 //  POST /api/permit  -  Creates a new fishing permit
 router.post("/permit",isAuthenticated, (req, res, next) => {
-    const { date, userId, LakeId  } = req.body;
-    Permit.create({ date, requestedBy: userId , lake: LakeId })
+    const { date, userId, lakeId  } = req.body;
+    Permit.create({ date, requestedBy: userId , lake: lakeId })
       .then((response) => res.json(response))
       .catch((err) => res.json(err));
   });
 
-  //get permit
+  //get permit iteration 2
   router.get("/permit/:userId", isAuthenticated, (req, res, next) => {
     const { userId } = req.params;
 
