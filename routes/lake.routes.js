@@ -64,7 +64,7 @@ router.post("/uploadpicture", isAuthenticated, async (req, res, next) =>{
 
 //GET /api/lake get all the lakes.
 
-router.get("/lake", isAuthenticated, (req, res, next) => {
+router.get("/lake", (req, res, next) => {
     Lake.find()
       .populate("ownerEmail")
       .then((allLake) => res.json(allLake))

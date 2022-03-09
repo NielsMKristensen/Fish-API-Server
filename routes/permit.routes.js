@@ -17,20 +17,20 @@ router.post("/permit",isAuthenticated, (req, res, next) => {
       .catch((err) => res.json(err));
   });
 
-  //get permit iteration 2
-  router.get("/permit/:userId", isAuthenticated, (req, res, next) => {
-    const { userId } = req.params;
+  // //get permit iteration 2
+  // router.get("/permit/:userId", isAuthenticated, (req, res, next) => {
+  //   const { userId } = req.params;
 
-    if (!mongoose.Types.ObjectId.isValid(userId)) {
-        res.status(400).json({ message: "Specified id is not valid" });
-        return;
-      }
-      //hertil
-    // Permit.findById(lakeId)
-    //   .populate("ownerEmail")
-    //   .then((lake) => res.status(200).json(lake))
-    //   .catch((err) => res.json(err));
-  });
+  //   if (!mongoose.Types.ObjectId.isValid(userId)) {
+  //       res.status(400).json({ message: "Specified id is not valid" });
+  //       return;
+  //     }
+  //     hertil
+  //   Permit.findById(lakeId)
+  //     .populate("ownerEmail")
+  //     .then((lake) => res.status(200).json(lake))
+  //     .catch((err) => res.json(err));
+  // });
 
 
 

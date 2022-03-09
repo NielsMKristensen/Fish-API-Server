@@ -21,10 +21,13 @@ const allRoutes = require("./routes/index.routes");
 app.use("/api", allRoutes);
 
 const lakeRouter = require("./routes/lake.routes");
-app.use("/api", isAuthenticated, lakeRouter);
+app.use("/api", lakeRouter);
 
 const permitRouter = require("./routes/permit.routes");
 app.use("/api", isAuthenticated, permitRouter);
+
+const userRouter = require("./routes/user.routes"); //  <== IMPORT
+app.use("/api", userRouter);
 
 const authRouter = require("./routes/auth.routes"); //  <== IMPORT
 app.use("/auth", authRouter);
